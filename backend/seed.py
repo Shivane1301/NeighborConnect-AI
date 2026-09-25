@@ -1,0 +1,108 @@
+from sqlalchemy.orm import Session
+
+from models import Vendor
+
+SEED_VENDORS = [
+    {
+        "name": "Arul Plumbing Works",
+        "category": "Plumber",
+        "description": "Fast leak repairs, tap replacement, and pipe maintenance for homes.",
+        "location": "White Town, Puducherry",
+        "distance": 1.8,
+        "rating": 4.8,
+        "review_count": 126,
+        "price": "Rs. 300-800",
+        "available": True,
+        "phone": "+91 98765 41001",
+    },
+    {
+        "name": "Bayline Electrical Services",
+        "category": "Electrician",
+        "description": "Certified electrician for wiring, switches, fans, and household repairs.",
+        "location": "Lawspet, Puducherry",
+        "distance": 3.2,
+        "rating": 4.6,
+        "review_count": 94,
+        "price": "Rs. 250-900",
+        "available": True,
+        "phone": "+91 98765 41002",
+    },
+    {
+        "name": "CleanNest Home Care",
+        "category": "Cleaner",
+        "description": "Reliable home deep cleaning and move-in cleaning across Puducherry.",
+        "location": "Muthialpet, Puducherry",
+        "distance": 2.4,
+        "rating": 4.7,
+        "review_count": 81,
+        "price": "Rs. 700-1800",
+        "available": True,
+        "phone": "+91 98765 41003",
+    },
+    {
+        "name": "Kaveri Woodcraft",
+        "category": "Carpenter",
+        "description": "Custom furniture, cupboard repairs, shelves, and wood finishing.",
+        "location": "Auroville Road, Tamil Nadu",
+        "distance": 8.6,
+        "rating": 4.5,
+        "review_count": 67,
+        "price": "Rs. 500-2500",
+        "available": False,
+        "phone": "+91 98765 41004",
+    },
+    {
+        "name": "Muthu Meals Kitchen",
+        "category": "Food Vendor",
+        "description": "Fresh South Indian lunch, dinner, and small event catering.",
+        "location": "Heritage Town, Puducherry",
+        "distance": 1.2,
+        "rating": 4.9,
+        "review_count": 143,
+        "price": "Rs. 120-450",
+        "available": True,
+        "phone": "+91 98765 41005",
+    },
+    {
+        "name": "Pondy Appliance Clinic",
+        "category": "Appliance Repair",
+        "description": "Washing machine, refrigerator, microwave, and other appliance repairs.",
+        "location": "Ariyankuppam, Puducherry",
+        "distance": 5.1,
+        "rating": 4.4,
+        "review_count": 73,
+        "price": "Rs. 350-1500",
+        "available": True,
+        "phone": "+91 98765 41006",
+    },
+    {
+        "name": "Thendral Plumbing and Pumps",
+        "category": "Plumber",
+        "description": "Water pump servicing, pipe fitting, bathroom, and tap repairs.",
+        "location": "Villupuram Road, Tamil Nadu",
+        "distance": 12.3,
+        "rating": 4.3,
+        "review_count": 49,
+        "price": "Rs. 300-1200",
+        "available": True,
+        "phone": "+91 98765 41007",
+    },
+    {
+        "name": "East Coast Home Fix",
+        "category": "Electrician",
+        "description": "Home electrical inspection, fan installation, and emergency wiring work.",
+        "location": "Oulgaret, Puducherry",
+        "distance": 4.5,
+        "rating": 4.2,
+        "review_count": 38,
+        "price": "Rs. 300-1000",
+        "available": False,
+        "phone": "+91 98765 41008",
+    },
+]
+
+
+def seed_vendors(db: Session) -> None:
+    if db.query(Vendor).count() == 0:
+        db.add_all(Vendor(**vendor) for vendor in SEED_VENDORS)
+        db.commit()
