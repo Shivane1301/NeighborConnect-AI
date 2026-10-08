@@ -1,0 +1,32 @@
+review,actual_sentiment,predicted_sentiment,confidence
+I appreciated the plumber calling when traffic slowed him down; he still arrived inside the revised window.,positive,negative,0.893989
+The tap replacement was neat enough that you can barely tell the fitting was changed.,positive,negative,0.679962
+"Our water pump failed on Sunday, but the local service replied promptly and restored it that evening.",positive,negative,0.429952
+The electrician replaced an overheating dimmer with a compatible unit and talked me through the new settings.,positive,negative,0.584797
+"Two fans were installed without wobble; the quote included labor, so there was nothing unexpected on the invoice.",positive,neutral,0.633026
+The electrician responded to my evening message the next morning and arranged a same-day safety check.,positive,negative,0.658649
+The team removed the paint dust without scratching the newly fitted floor.,positive,negative,0.651821
+I received a photo update while the custom desk was being finished.,positive,negative,0.511823
+The cupboard hinge repair was small but done with the same care as a larger job.,positive,negative,0.672313
+"Despite a busy week, the carpenter kept the agreed delivery date for our bookcase.",positive,negative,0.449957
+"A technician got the chest freezer cold again, saving a batch of groceries; the service charge was clear.",positive,negative,0.852677
+Good communication and a reliable repair made the appliance service worth recommending.,positive,neutral,0.426201
+"The delivery driver called from the gate, and the vendor quickly sorted out the access issue.",positive,negative,0.459125
+An extra vegetarian meal was added without fuss; communication was courteous throughout.,positive,negative,0.453855
+"One washer was replaced, and the old part was left beside the sink.",neutral,negative,0.467709
+The invoice lists a call-out fee and a separate charge for the replacement tap.,neutral,negative,0.859131
+The cleaner asked which cupboard shelves were part of the request.,neutral,negative,0.607102
+The carpenter took measurements for a shelf that will span the alcove.,neutral,positive,0.484854
+A replacement hinge was fitted to the upper cabinet door.,neutral,negative,0.607753
+The old door handle was returned to the homeowner.,neutral,negative,0.422361
+The dishwasher was disconnected while the hose measurement was taken.,neutral,negative,0.774723
+The technician ran a rinse cycle and left the settings unchanged.,neutral,negative,0.697213
+An estimate for the dryer motor was emailed later that day.,neutral,negative,0.630758
+The caterer asked for the final guest count one day before the event.,neutral,positive,0.751485
+"I waited all morning for the safety inspection, then received a cancellation text at noon.",negative,neutral,0.715078
+Several boxes were moved and one fragile lamp was broken during the clean.,negative,neutral,0.559419
+"The work was rushed, with visible gaps around the frame.",negative,neutral,0.593657
+"They did not test the dryer after repair, and it stopped mid-cycle.",negative,positive,0.588811
+"The estimate changed after the work began, with little explanation.",negative,neutral,0.646329
+"Portions were much smaller than listed, with no response to my complaint.",negative,positive,0.669754
+Several meal boxes were open in the bag when the driver arrived.,negative,neutral,0.395108

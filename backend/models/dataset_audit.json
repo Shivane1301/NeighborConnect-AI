@@ -1,0 +1,122 @@
+{
+  "methodology": {
+    "exact_duplicate_definition": "Review text after trimming surrounding whitespace; case-sensitive.",
+    "near_duplicate_similarity": "TF-IDF cosine similarity over character n-grams using char_wb and 3-5 character n-grams.",
+    "near_duplicate_threshold": 0.8,
+    "near_duplicate_pair_counting": "Unique unordered review pairs within training; every training/test pair across datasets.",
+    "repeated_phrase_method": "Distinct 3-6 word phrases counted once per review."
+  },
+  "training": {
+    "review_count": 1500,
+    "class_counts": {
+      "positive": 500,
+      "neutral": 500,
+      "negative": 500
+    },
+    "class_percentages": {
+      "positive": 33.3333,
+      "neutral": 33.3333,
+      "negative": 33.3333
+    },
+    "exact_duplicate_review_count": 0,
+    "near_duplicate_pair_count": 1048,
+    "unique_reviews_in_near_duplicate_pairs": 1089,
+    "average_review_length_characters": 149.318,
+    "minimum_review_length_characters": 49,
+    "maximum_review_length_characters": 192,
+    "average_review_length_words": 25.144,
+    "average_sentences_per_review": 1.976,
+    "reviews_containing_a_repeated_exact_sentence": 1449,
+    "percent_reviews_containing_a_repeated_exact_sentence": 96.6,
+    "near_duplicate_examples": [
+      {
+        "similarity": 0.9316,
+        "review_1": "My request for a microwave that stopped responding was handled by a local appliance technician. The technician arrived promptly, worked carefully, and left the kitchen tidy.",
+        "review_2": "I booked a local appliance technician to handle a microwave that stopped responding. The technician arrived promptly, worked carefully, and left the kitchen tidy."
+      },
+      {
+        "similarity": 0.9303,
+        "review_1": "A carpenter accepted the request to handle a sticking bedroom door. The carpenter measured the opening and wrote down the shelf dimensions.",
+        "review_2": "I booked a local carpenter to handle a sticking bedroom door. The carpenter measured the opening and wrote down the shelf dimensions."
+      },
+      {
+        "similarity": 0.9301,
+        "review_1": "I booked a local food vendor to handle a breakfast order for visiting relatives. The receipt lists the meal count, delivery fee, and requested items.",
+        "review_2": "A food vendor accepted the request to handle a breakfast order for visiting relatives. The receipt lists the meal count, delivery fee, and requested items."
+      },
+      {
+        "similarity": 0.9261,
+        "review_1": "I hired a nearby cleaner to handle a move-out clean for a two-bedroom flat. An unapproved add-on appeared on the final bill with no explanation.",
+        "review_2": "I asked a nearby cleaner to deal with a move-out clean for a two-bedroom flat. An unapproved add-on appeared on the final bill with no explanation."
+      },
+      {
+        "similarity": 0.9256,
+        "review_1": "I booked a local electrician to handle an intermittent power outlet. The electrician called before arrival to confirm access to the panel.",
+        "review_2": "A local electrician was scheduled to take care of an intermittent power outlet. The electrician called before arrival to confirm access to the panel."
+      }
+    ],
+    "most_common_repeated_phrases": [
+      {"phrase": "request for a", "review_count": 162},
+      {"phrase": "my request for", "review_count": 140},
+      {"phrase": "take care of", "review_count": 135},
+      {"phrase": "to take care", "review_count": 135},
+      {"phrase": "to take care of", "review_count": 135},
+      {"phrase": "to handle a", "review_count": 134},
+      {"phrase": "i contacted a", "review_count": 129},
+      {"phrase": "my request for a", "review_count": 107},
+      {"phrase": "care of a", "review_count": 100},
+      {"phrase": "take care of a", "review_count": 100},
+      {"phrase": "to take care of a", "review_count": 100},
+      {"phrase": "booking was for", "review_count": 95}
+    ],
+    "most_common_repeated_sentences": [
+      {"sentence": "the food arrived cold and late, despite the delivery time being confirmed.", "occurrences": 21},
+      {"sentence": "every meal was labeled correctly, arrived hot, and was ready at the agreed time.", "occurrences": 20},
+      {"sentence": "an unapproved add-on appeared on the final bill with no explanation.", "occurrences": 20},
+      {"sentence": "the washer still will not drain, and my follow-up request was ignored.", "occurrences": 19},
+      {"sentence": "the order contained six meals and came in labeled containers.", "occurrences": 18},
+      {"sentence": "the visit lasted about an hour, and a written estimate was provided.", "occurrences": 18},
+      {"sentence": "the joinery is sturdy and neat, with careful attention to the finish.", "occurrences": 18},
+      {"sentence": "the service receipt lists the inspection and the materials used.", "occurrences": 17}
+    ]
+  },
+  "independent_test": {
+    "review_count": 150,
+    "class_counts": {
+      "positive": 50,
+      "neutral": 50,
+      "negative": 50
+    },
+    "class_percentages": {
+      "positive": 33.3333,
+      "neutral": 33.3333,
+      "negative": 33.3333
+    },
+    "average_review_length_characters": 76.52,
+    "minimum_review_length_characters": 49,
+    "maximum_review_length_characters": 132,
+    "average_review_length_words": 12.8133,
+    "average_sentences_per_review": 1.0067,
+    "exact_overlap_count_with_training": 0,
+    "highly_similar_train_test_pair_count": 0,
+    "unique_test_reviews_at_or_above_similarity_threshold": 0,
+    "most_common_repeated_phrases": [
+      {"phrase": "after the visit", "review_count": 3},
+      {"phrase": "and left the", "review_count": 3},
+      {"phrase": "the service charge", "review_count": 3},
+      {"phrase": "after the agreed", "review_count": 2},
+      {"phrase": "after the work", "review_count": 2},
+      {"phrase": "and a separate", "review_count": 2},
+      {"phrase": "and the technician", "review_count": 2},
+      {"phrase": "and the vendor", "review_count": 2}
+    ],
+    "most_common_repeated_sentences": []
+  },
+  "assessment": {
+    "training_reviews_appear_template_generated": true,
+    "template_evidence": "High pairwise near-duplicate count, repeated exact sentence clauses, repeated phrase patterns, and an average of nearly two sentences per review.",
+    "same_broad_local_services_domain": true,
+    "noticeable_writing_style_difference": true,
+    "style_and_domain_summary": "Both datasets cover local services. Training reviews are substantially longer and typically use two-part repeated sentence frames; independent-test reviews are shorter, predominantly one sentence, and use less repeated wording."
+  }
+}

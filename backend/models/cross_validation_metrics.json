@@ -1,0 +1,303 @@
+{
+  "dataset": {
+    "path": "backend/dataset/reviews.csv",
+    "size": 1500,
+    "class_distribution": {
+      "negative": 500,
+      "neutral": 500,
+      "positive": 500
+    }
+  },
+  "cross_validation": {
+    "strategy": "StratifiedKFold",
+    "folds": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "standard_deviation_ddof": 0,
+    "independent_test_set_used": false
+  },
+  "models": {
+    "A": {
+      "name": "TF-IDF unigrams + Logistic Regression",
+      "configuration": {
+        "tfidf_ngram_range": [
+          1,
+          1
+        ],
+        "classifier": "logistic_regression",
+        "class_weight": null,
+        "random_state": 42
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "validation_size": 300,
+          "accuracy": 0.9866666666666667,
+          "macro_precision": 0.9868633922215752,
+          "macro_recall": 0.9866666666666667,
+          "macro_f1": 0.9866484034569075,
+          "weighted_f1": 0.9866484034569076
+        },
+        {
+          "fold": 2,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9901307189542483,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.98999933326666,
+          "weighted_f1": 0.98999933326666
+        },
+        {
+          "fold": 3,
+          "validation_size": 300,
+          "accuracy": 0.9933333333333333,
+          "macro_precision": 0.9933333333333333,
+          "macro_recall": 0.9933333333333333,
+          "macro_f1": 0.9933333333333333,
+          "weighted_f1": 0.9933333333333333
+        },
+        {
+          "fold": 4,
+          "validation_size": 300,
+          "accuracy": 0.9866666666666667,
+          "macro_precision": 0.9868957483983692,
+          "macro_recall": 0.9866666666666667,
+          "macro_f1": 0.9866648230093106,
+          "weighted_f1": 0.9866648230093105
+        },
+        {
+          "fold": 5,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9900323365669901,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9899997499937498,
+          "weighted_f1": 0.98999974999375
+        }
+      ],
+      "summary": {
+        "mean_accuracy": 0.9893333333333333,
+        "std_accuracy": 0.0024944382578492687,
+        "mean_macro_precision": 0.9894511058949031,
+        "mean_macro_recall": 0.9893333333333333,
+        "mean_macro_f1": 0.9893291286119922,
+        "std_macro_f1": 0.002498694637958135,
+        "mean_weighted_f1": 0.9893291286119922
+      }
+    },
+    "B": {
+      "name": "TF-IDF unigrams + bigrams + Logistic Regression",
+      "configuration": {
+        "tfidf_ngram_range": [
+          1,
+          2
+        ],
+        "classifier": "logistic_regression",
+        "class_weight": null,
+        "random_state": 42
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "validation_size": 300,
+          "accuracy": 0.9866666666666667,
+          "macro_precision": 0.986797385620915,
+          "macro_recall": 0.9866666666666667,
+          "macro_f1": 0.9866659999333267,
+          "weighted_f1": 0.9866659999333266
+        },
+        {
+          "fold": 2,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9902912621359223,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9900318463825655,
+          "weighted_f1": 0.9900318463825655
+        },
+        {
+          "fold": 3,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9900660066006601,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9900165004125103,
+          "weighted_f1": 0.9900165004125102
+        },
+        {
+          "fold": 4,
+          "validation_size": 300,
+          "accuracy": 0.9866666666666667,
+          "macro_precision": 0.9867300455535749,
+          "macro_recall": 0.9866666666666667,
+          "macro_f1": 0.9866494187107153,
+          "weighted_f1": 0.9866494187107152
+        },
+        {
+          "fold": 5,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9900323365669901,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9899997499937498,
+          "weighted_f1": 0.98999974999375
+        }
+      ],
+      "summary": {
+        "mean_accuracy": 0.9886666666666667,
+        "std_accuracy": 0.0016329931618554354,
+        "mean_macro_precision": 0.9887834072956124,
+        "mean_macro_recall": 0.9886666666666667,
+        "mean_macro_f1": 0.9886727030865735,
+        "std_macro_f1": 0.0016452752023247432,
+        "mean_weighted_f1": 0.9886727030865735
+      }
+    },
+    "C": {
+      "name": "TF-IDF unigrams + bigrams + balanced Logistic Regression",
+      "configuration": {
+        "tfidf_ngram_range": [
+          1,
+          2
+        ],
+        "classifier": "logistic_regression",
+        "class_weight": "balanced",
+        "random_state": 42
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "validation_size": 300,
+          "accuracy": 0.9866666666666667,
+          "macro_precision": 0.986797385620915,
+          "macro_recall": 0.9866666666666667,
+          "macro_f1": 0.9866659999333267,
+          "weighted_f1": 0.9866659999333266
+        },
+        {
+          "fold": 2,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9902912621359223,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9900318463825655,
+          "weighted_f1": 0.9900318463825655
+        },
+        {
+          "fold": 3,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9900660066006601,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9900165004125103,
+          "weighted_f1": 0.9900165004125102
+        },
+        {
+          "fold": 4,
+          "validation_size": 300,
+          "accuracy": 0.9866666666666667,
+          "macro_precision": 0.9867300455535749,
+          "macro_recall": 0.9866666666666667,
+          "macro_f1": 0.9866494187107153,
+          "weighted_f1": 0.9866494187107152
+        },
+        {
+          "fold": 5,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9900323365669901,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9899997499937498,
+          "weighted_f1": 0.98999974999375
+        }
+      ],
+      "summary": {
+        "mean_accuracy": 0.9886666666666667,
+        "std_accuracy": 0.0016329931618554354,
+        "mean_macro_precision": 0.9887834072956124,
+        "mean_macro_recall": 0.9886666666666667,
+        "mean_macro_f1": 0.9886727030865735,
+        "std_macro_f1": 0.0016452752023247432,
+        "mean_weighted_f1": 0.9886727030865735
+      }
+    },
+    "D": {
+      "name": "TF-IDF unigrams + bigrams + LinearSVC",
+      "configuration": {
+        "tfidf_ngram_range": [
+          1,
+          2
+        ],
+        "classifier": "linear_svc",
+        "class_weight": null,
+        "random_state": 42
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "validation_size": 300,
+          "accuracy": 0.9866666666666667,
+          "macro_precision": 0.9866659999333267,
+          "macro_recall": 0.9866666666666667,
+          "macro_f1": 0.9866498329124895,
+          "weighted_f1": 0.9866498329124895
+        },
+        {
+          "fold": 2,
+          "validation_size": 300,
+          "accuracy": 0.9866666666666667,
+          "macro_precision": 0.9869579288025889,
+          "macro_recall": 0.9866666666666667,
+          "macro_f1": 0.9866644161603028,
+          "weighted_f1": 0.9866644161603026
+        },
+        {
+          "fold": 3,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9900660066006601,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9900165004125103,
+          "weighted_f1": 0.9900165004125104
+        },
+        {
+          "fold": 4,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9901307189542484,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.98999933326666,
+          "weighted_f1": 0.98999933326666
+        },
+        {
+          "fold": 5,
+          "validation_size": 300,
+          "accuracy": 0.99,
+          "macro_precision": 0.9900323365669901,
+          "macro_recall": 0.9899999999999999,
+          "macro_f1": 0.9899997499937498,
+          "weighted_f1": 0.98999974999375
+        }
+      ],
+      "summary": {
+        "mean_accuracy": 0.9886666666666667,
+        "std_accuracy": 0.0016329931618554354,
+        "mean_macro_precision": 0.9887705981715629,
+        "mean_macro_recall": 0.9886666666666667,
+        "mean_macro_f1": 0.9886659665491425,
+        "std_macro_f1": 0.0016402308128128376,
+        "mean_weighted_f1": 0.9886659665491425
+      }
+    }
+  },
+  "highest_mean_macro_f1": {
+    "model": "A",
+    "name": "TF-IDF unigrams + Logistic Regression",
+    "mean_macro_f1": 0.9893291286119922
+  },
+  "most_consistent_macro_f1": {
+    "model": "D",
+    "name": "TF-IDF unigrams + bigrams + LinearSVC",
+    "std_macro_f1": 0.0016402308128128376
+  }
+}

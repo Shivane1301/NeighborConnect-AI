@@ -1,0 +1,745 @@
+{
+  "model": {
+    "vectorizer": "backend\\models\\experimental_diverse_vectorizer_a.joblib",
+    "classifier": "backend\\models\\experimental_diverse_a.joblib"
+  },
+  "test_dataset": {
+    "path": "backend/dataset/reviews_test.csv",
+    "total_reviews": 150,
+    "class_counts": {
+      "positive": 50,
+      "neutral": 50,
+      "negative": 50
+    }
+  },
+  "metrics": {
+    "correctly_classified_reviews": 119,
+    "incorrectly_classified_reviews": 31,
+    "overall_accuracy": 0.793333,
+    "error_count": 31,
+    "error_percentage": 20.6667
+  },
+  "error_breakdown": {
+    "positive_to_negative": 12,
+    "positive_to_neutral": 2,
+    "neutral_to_positive": 2,
+    "neutral_to_negative": 8,
+    "negative_to_positive": 2,
+    "negative_to_neutral": 5
+  },
+  "confusion_matrix": {
+    "labels": [
+      "positive",
+      "neutral",
+      "negative"
+    ],
+    "matrix": [
+      [
+        36,
+        2,
+        12
+      ],
+      [
+        2,
+        40,
+        8
+      ],
+      [
+        2,
+        5,
+        43
+      ]
+    ]
+  },
+  "error_counts_by_review_length": {
+    "1-10_words": {
+      "total_reviews": 27,
+      "error_count": 5,
+      "error_percentage": 18.5185
+    },
+    "11-20_words": {
+      "total_reviews": 122,
+      "error_count": 26,
+      "error_percentage": 21.3115
+    },
+    "21-35_words": {
+      "total_reviews": 1,
+      "error_count": 0,
+      "error_percentage": 0.0
+    },
+    "36+_words": {
+      "total_reviews": 0,
+      "error_count": 0,
+      "error_percentage": 0.0
+    }
+  },
+  "pattern_analysis": {
+    "method": "Transparent case-insensitive keyword/phrase heuristics applied to misclassified review text; flags may overlap and are descriptive, not causal explanations.",
+    "counts": {
+      "negation": 2,
+      "strong_positive_wording": 0,
+      "strong_negative_wording": 0,
+      "informal_language": 0,
+      "ambiguous_or_hedged_wording": 2,
+      "mixed_sentiment_terms": 3,
+      "neutral_factual_wording": 8,
+      "short_review_1_to_10_words": 5,
+      "long_review_36_or_more_words": 0,
+      "service_specific_terminology": 20,
+      "confidence_below_0_60": 14
+    },
+    "examples": {
+      "neutral_factual_wording": [
+        "I appreciated the plumber calling when traffic slowed him down; he still arrived inside the revised window.",
+        "The electrician replaced an overheating dimmer with a compatible unit and talked me through the new settings.",
+        "Two fans were installed without wobble; the quote included labor, so there was nothing unexpected on the invoice.",
+        "One washer was replaced, and the old part was left beside the sink.",
+        "The invoice lists a call-out fee and a separate charge for the replacement tap."
+      ],
+      "service_specific_terminology": [
+        "I appreciated the plumber calling when traffic slowed him down; he still arrived inside the revised window.",
+        "The tap replacement was neat enough that you can barely tell the fitting was changed.",
+        "The electrician replaced an overheating dimmer with a compatible unit and talked me through the new settings.",
+        "The electrician responded to my evening message the next morning and arranged a same-day safety check.",
+        "The team removed the paint dust without scratching the newly fitted floor."
+      ],
+      "mixed_sentiment_terms": [
+        "Our water pump failed on Sunday, but the local service replied promptly and restored it that evening.",
+        "The delivery driver called from the gate, and the vendor quickly sorted out the access issue.",
+        "Several boxes were moved and one fragile lamp was broken during the clean."
+      ],
+      "ambiguous_or_hedged_wording": [
+        "Our water pump failed on Sunday, but the local service replied promptly and restored it that evening.",
+        "The cupboard hinge repair was small but done with the same care as a larger job."
+      ],
+      "confidence_below_0_60": [
+        "Our water pump failed on Sunday, but the local service replied promptly and restored it that evening.",
+        "The electrician replaced an overheating dimmer with a compatible unit and talked me through the new settings.",
+        "I received a photo update while the custom desk was being finished.",
+        "Despite a busy week, the carpenter kept the agreed delivery date for our bookcase.",
+        "Good communication and a reliable repair made the appliance service worth recommending."
+      ],
+      "short_review_1_to_10_words": [
+        "A replacement hinge was fitted to the upper cabinet door.",
+        "The old door handle was returned to the homeowner.",
+        "The dishwasher was disconnected while the hose measurement was taken.",
+        "The work was rushed, with visible gaps around the frame.",
+        "The estimate changed after the work began, with little explanation."
+      ],
+      "negation": [
+        "They did not test the dryer after repair, and it stopped mid-cycle.",
+        "Portions were much smaller than listed, with no response to my complaint."
+      ]
+    }
+  },
+  "misclassifications": [
+    {
+      "review": "I appreciated the plumber calling when traffic slowed him down; he still arrived inside the revised window.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.893989,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "The tap replacement was neat enough that you can barely tell the fitting was changed.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.679962,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "Our water pump failed on Sunday, but the local service replied promptly and restored it that evening.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.429952,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": true,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": true,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "The electrician replaced an overheating dimmer with a compatible unit and talked me through the new settings.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.584797,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "Two fans were installed without wobble; the quote included labor, so there was nothing unexpected on the invoice.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "neutral",
+      "confidence": 0.633026,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "The electrician responded to my evening message the next morning and arranged a same-day safety check.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.658649,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "The team removed the paint dust without scratching the newly fitted floor.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.651821,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "I received a photo update while the custom desk was being finished.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.511823,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "The cupboard hinge repair was small but done with the same care as a larger job.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.672313,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": true,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "Despite a busy week, the carpenter kept the agreed delivery date for our bookcase.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.449957,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "A technician got the chest freezer cold again, saving a batch of groceries; the service charge was clear.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.852677,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "Good communication and a reliable repair made the appliance service worth recommending.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "neutral",
+      "confidence": 0.426201,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "The delivery driver called from the gate, and the vendor quickly sorted out the access issue.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.459125,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": true,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "An extra vegetarian meal was added without fuss; communication was courteous throughout.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": 0.453855,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "One washer was replaced, and the old part was left beside the sink.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": 0.467709,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "The invoice lists a call-out fee and a separate charge for the replacement tap.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": 0.859131,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "The cleaner asked which cupboard shelves were part of the request.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": 0.607102,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "The carpenter took measurements for a shelf that will span the alcove.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "positive",
+      "confidence": 0.484854,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "A replacement hinge was fitted to the upper cabinet door.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": 0.607753,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "The old door handle was returned to the homeowner.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": 0.422361,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "The dishwasher was disconnected while the hose measurement was taken.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": 0.774723,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "The technician ran a rinse cycle and left the settings unchanged.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": 0.697213,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "An estimate for the dryer motor was emailed later that day.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": 0.630758,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "The caterer asked for the final guest count one day before the event.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "positive",
+      "confidence": 0.751485,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "I waited all morning for the safety inspection, then received a cancellation text at noon.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": 0.715078,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "Several boxes were moved and one fragile lamp was broken during the clean.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": 0.559419,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": true,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "The work was rushed, with visible gaps around the frame.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": 0.593657,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "They did not test the dryer after repair, and it stopped mid-cycle.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "positive",
+      "confidence": 0.588811,
+      "pattern_flags": {
+        "negation": true,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    },
+    {
+      "review": "The estimate changed after the work began, with little explanation.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": 0.646329,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "Portions were much smaller than listed, with no response to my complaint.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "positive",
+      "confidence": 0.669754,
+      "pattern_flags": {
+        "negation": true,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": false,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": false
+      }
+    },
+    {
+      "review": "Several meal boxes were open in the bag when the driver arrived.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": 0.395108,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "informal_language": false,
+        "service_specific_terminology": true,
+        "ambiguous_or_hedged_wording": false,
+        "confidence_below_0_60": true
+      }
+    }
+  ],
+  "protected_file_hashes_before": {
+    "locked_test_dataset": "35e02f47ab129c550b275400a7b372de0ca4b75702b41ce157ad2288308dec9d",
+    "original_training_dataset": "3b1c4cfdc13b8502dce29fc2328d016b7f9f56bef6c136ca148f244b36be84a7",
+    "diverse_training_dataset": "239533297c1124b87abe75c562c3127a4f7b761d579a8223691b00315dfc3932",
+    "production_classifier": "6aeb07e480443120fedcf57b9414beb2cdd813d9a36741312952b34c5c8e8839",
+    "production_vectorizer": "f52d32919d10eb464fcc740a842082457a780f49ee1a445cf267f46dd1d5fa44",
+    "experimental_classifier": "b0501d386cac5c8bf242b276920e7ab9fbb5faf3fdbb650bdc2b549edb2ced31",
+    "experimental_vectorizer": "bdc6c2a915768b9418b65b7ad69fc32c2bf56fafe093a48c9c9f407161191145"
+  },
+  "protected_file_hashes_after": {
+    "locked_test_dataset": "35e02f47ab129c550b275400a7b372de0ca4b75702b41ce157ad2288308dec9d",
+    "original_training_dataset": "3b1c4cfdc13b8502dce29fc2328d016b7f9f56bef6c136ca148f244b36be84a7",
+    "diverse_training_dataset": "239533297c1124b87abe75c562c3127a4f7b761d579a8223691b00315dfc3932",
+    "production_classifier": "6aeb07e480443120fedcf57b9414beb2cdd813d9a36741312952b34c5c8e8839",
+    "production_vectorizer": "f52d32919d10eb464fcc740a842082457a780f49ee1a445cf267f46dd1d5fa44",
+    "experimental_classifier": "b0501d386cac5c8bf242b276920e7ab9fbb5faf3fdbb650bdc2b549edb2ced31",
+    "experimental_vectorizer": "bdc6c2a915768b9418b65b7ad69fc32c2bf56fafe093a48c9c9f407161191145"
+  },
+  "protected_files_unchanged": true
+}

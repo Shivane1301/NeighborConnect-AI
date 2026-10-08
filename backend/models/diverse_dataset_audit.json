@@ -1,0 +1,370 @@
+{
+  "methodology": {
+    "near_duplicate_similarity": "TF-IDF cosine similarity using char_wb character n-grams of lengths 3-5, fitted independently for each dataset.",
+    "near_duplicate_threshold": 0.8,
+    "near_duplicate_pair_counting": "Unique unordered pairs, excluding exact duplicate pairs.",
+    "repeated_sentence_definition": "A review counts if it contains any case-insensitive sentence that occurs in another review.",
+    "phrase_counting": "Distinct 3-6 word phrases counted once per review."
+  },
+  "current_training_dataset": {
+    "review_count": 1500,
+    "class_counts": {
+      "positive": 500,
+      "neutral": 500,
+      "negative": 500
+    },
+    "class_percentages": {
+      "positive": 33.3333,
+      "neutral": 33.3333,
+      "negative": 33.3333
+    },
+    "exact_duplicate_review_count": 0,
+    "near_duplicate_pair_count": 1064,
+    "unique_reviews_in_near_duplicate_pairs": 1100,
+    "near_duplicate_threshold": 0.8,
+    "near_duplicate_examples": [
+      {
+        "similarity": 0.9322,
+        "review_1": "My request for a microwave that stopped responding was handled by a local appliance technician. The technician arrived promptly, worked carefully, and left the kitchen tidy.",
+        "review_2": "I booked a local appliance technician to handle a microwave that stopped responding. The technician arrived promptly, worked carefully, and left the kitchen tidy."
+      },
+      {
+        "similarity": 0.9319,
+        "review_1": "A carpenter accepted the request to handle a sticking bedroom door. The carpenter measured the opening and wrote down the shelf dimensions.",
+        "review_2": "I booked a local carpenter to handle a sticking bedroom door. The carpenter measured the opening and wrote down the shelf dimensions."
+      },
+      {
+        "similarity": 0.9315,
+        "review_1": "I booked a local food vendor to handle a breakfast order for visiting relatives. The receipt lists the meal count, delivery fee, and requested items.",
+        "review_2": "A food vendor accepted the request to handle a breakfast order for visiting relatives. The receipt lists the meal count, delivery fee, and requested items."
+      },
+      {
+        "similarity": 0.9279,
+        "review_1": "I booked a local electrician to handle an intermittent power outlet. The electrician called before arrival to confirm access to the panel.",
+        "review_2": "A local electrician was scheduled to take care of an intermittent power outlet. The electrician called before arrival to confirm access to the panel."
+      },
+      {
+        "similarity": 0.9272,
+        "review_1": "A carpenter accepted the request to handle a dining-chair joint that had come apart. The receipt records the replacement handle and the labor charge.",
+        "review_2": "I booked a local carpenter to handle a dining-chair joint that had come apart. The receipt records the replacement handle and the labor charge."
+      },
+      {
+        "similarity": 0.9268,
+        "review_1": "I hired a nearby cleaner to handle a move-out clean for a two-bedroom flat. An unapproved add-on appeared on the final bill with no explanation.",
+        "review_2": "I asked a nearby cleaner to deal with a move-out clean for a two-bedroom flat. An unapproved add-on appeared on the final bill with no explanation."
+      },
+      {
+        "similarity": 0.9262,
+        "review_1": "The carpenter I contacted agreed to take care of a loose cupboard hinge. A courteous update before arrival made the whole repair straightforward.",
+        "review_2": "A nearby carpenter came out to take care of a loose cupboard hinge. A courteous update before arrival made the whole repair straightforward."
+      },
+      {
+        "similarity": 0.9258,
+        "review_1": "I booked a local carpenter to handle two drawers that would not close properly. The estimate listed the wood type, labor, and expected completion date.",
+        "review_2": "The appointment was with a carpenter for two drawers that would not close properly. The estimate listed the wood type, labor, and expected completion date."
+      },
+      {
+        "similarity": 0.9248,
+        "review_1": "I booked a local carpenter to handle two drawers that would not close properly. The estimate listed the wood type, labor, and expected completion date.",
+        "review_2": "A local carpenter was scheduled to take care of two drawers that would not close properly. The estimate listed the wood type, labor, and expected completion date."
+      },
+      {
+        "similarity": 0.9248,
+        "review_1": "I booked a local food vendor to handle a birthday cake with a custom message. The order contained six meals and came in labeled containers.",
+        "review_2": "The appointment was with a food vendor for a birthday cake with a custom message. The order contained six meals and came in labeled containers."
+      }
+    ],
+    "reviews_containing_a_repeated_exact_sentence": 1449,
+    "percent_reviews_containing_a_repeated_exact_sentence": 96.6,
+    "average_review_length_characters": 149.318,
+    "minimum_review_length_characters": 49,
+    "maximum_review_length_characters": 192,
+    "average_review_length_words": 25.144,
+    "minimum_review_length_words": 7,
+    "maximum_review_length_words": 32,
+    "word_length_buckets": {
+      "5-10": 44,
+      "11-20": 18,
+      "21-35": 1438,
+      "36-60": 0
+    },
+    "most_common_repeated_phrases": [
+      {
+        "phrase": "request for a",
+        "review_count": 162
+      },
+      {
+        "phrase": "my request for",
+        "review_count": 140
+      },
+      {
+        "phrase": "take care of",
+        "review_count": 135
+      },
+      {
+        "phrase": "to take care",
+        "review_count": 135
+      },
+      {
+        "phrase": "to take care of",
+        "review_count": 135
+      },
+      {
+        "phrase": "to handle a",
+        "review_count": 134
+      },
+      {
+        "phrase": "i contacted a",
+        "review_count": 129
+      },
+      {
+        "phrase": "my request for a",
+        "review_count": 107
+      },
+      {
+        "phrase": "care of a",
+        "review_count": 100
+      },
+      {
+        "phrase": "take care of a",
+        "review_count": 100
+      },
+      {
+        "phrase": "to take care of a",
+        "review_count": 100
+      },
+      {
+        "phrase": "booking was for",
+        "review_count": 95
+      },
+      {
+        "phrase": "the booking was",
+        "review_count": 95
+      },
+      {
+        "phrase": "the booking was for",
+        "review_count": 95
+      },
+      {
+        "phrase": "was for a",
+        "review_count": 88
+      }
+    ],
+    "most_common_repeated_sentences": [
+      {
+        "sentence": "the food arrived cold and late, despite the delivery time being confirmed.",
+        "occurrences": 21
+      },
+      {
+        "sentence": "every meal was labeled correctly, arrived hot, and was ready at the agreed time.",
+        "occurrences": 20
+      },
+      {
+        "sentence": "an unapproved add-on appeared on the final bill with no explanation.",
+        "occurrences": 20
+      },
+      {
+        "sentence": "the washer still will not drain, and my follow-up request was ignored.",
+        "occurrences": 19
+      },
+      {
+        "sentence": "the order contained six meals and came in labeled containers.",
+        "occurrences": 18
+      },
+      {
+        "sentence": "the visit lasted about an hour, and a written estimate was provided.",
+        "occurrences": 18
+      },
+      {
+        "sentence": "the joinery is sturdy and neat, with careful attention to the finish.",
+        "occurrences": 18
+      },
+      {
+        "sentence": "the service receipt lists the inspection and the materials used.",
+        "occurrences": 17
+      },
+      {
+        "sentence": "communication was easy, and the team finished before the guests arrived.",
+        "occurrences": 17
+      },
+      {
+        "sentence": "the requested measurements were sent by message after the appointment.",
+        "occurrences": 17
+      },
+      {
+        "sentence": "the receipt shows the inspection fee and the date of service.",
+        "occurrences": 17
+      },
+      {
+        "sentence": "a parts list and a written estimate were provided after inspection.",
+        "occurrences": 17
+      },
+      {
+        "sentence": "several surfaces were missed, and the cleaner left before the agreed time.",
+        "occurrences": 17
+      },
+      {
+        "sentence": "they scratched the floor, left wood shavings behind, and ignored my message.",
+        "occurrences": 16
+      },
+      {
+        "sentence": "the quoted amount was paid after the scheduled cleaning was finished.",
+        "occurrences": 16
+      }
+    ]
+  },
+  "diverse_dataset": {
+    "review_count": 1500,
+    "class_counts": {
+      "positive": 500,
+      "neutral": 500,
+      "negative": 500
+    },
+    "class_percentages": {
+      "positive": 33.3333,
+      "neutral": 33.3333,
+      "negative": 33.3333
+    },
+    "exact_duplicate_review_count": 0,
+    "near_duplicate_pair_count": 58,
+    "unique_reviews_in_near_duplicate_pairs": 113,
+    "near_duplicate_threshold": 0.8,
+    "near_duplicate_examples": [
+      {
+        "similarity": 0.9067,
+        "review_1": "The call concerned oven heating unevenly; ; the oven was left disconnected and the revised price came late.",
+        "review_2": "The first call was about oven heating unevenly; ; the oven was left disconnected and the revised price came late."
+      },
+      {
+        "similarity": 0.8802,
+        "review_1": "I had explained streaked upper windows once already, so this time I listed what I had tried and what changed; ; streaks remained on the windows despite the deep-clean charge.",
+        "review_2": "I had explained dust after tile cutting once already, so this time I listed what I had tried and what changed; ; streaks remained on the windows despite the deep-clean charge."
+      },
+      {
+        "similarity": 0.8787,
+        "review_1": "The call concerned stairwell needing another coat; ; paint splashed onto the floor and the crew would not return.",
+        "review_2": "I asked a shop about stairwell needing another coat; paint splashed onto the floor and the crew would not return."
+      },
+      {
+        "similarity": 0.8779,
+        "review_1": "When the first estimate for wet pipe joint under sink seemed vague, I asked for the steps and possible materials to be explained; an unapproved valve charge pushed the bill past the estimate.",
+        "review_2": "When the first estimate for kitchen tap leak seemed vague, I asked for the steps and possible materials to be explained; an unapproved valve charge pushed the bill past the estimate."
+      },
+      {
+        "similarity": 0.8717,
+        "review_1": "The quote was for bike chain skipping under load; the service card lists oil grade and a suggested check date.",
+        "review_2": "The request involved bike chain skipping under load; ; the service card lists oil grade and a suggested check date."
+      },
+      {
+        "similarity": 0.8694,
+        "review_1": "The call concerned wet pipe joint under sink; one washer was replaced and labor appears separately on the receipt.",
+        "review_2": "The estimate covered wet pipe joint under sink; ; one washer was replaced and labor appears separately on the receipt."
+      },
+      {
+        "similarity": 0.867,
+        "review_1": "We discussed rice packed in lighter bags by phone first, then settled on a visit after the parts list was clarified; the fruit was ripe for the weekend rather than just attractive.",
+        "review_2": "We discussed spice requested by phone by phone first, then settled on a visit after the parts list was clarified; ; the fruit was ripe for the weekend rather than just attractive."
+      },
+      {
+        "similarity": 0.8653,
+        "review_1": "I asked a shop about dust after tile cutting; they worked around the sleeping baby and finished before lunch.",
+        "review_2": "I called after noticing dust after tile cutting; they worked around the sleeping baby and finished before lunch."
+      },
+      {
+        "similarity": 0.8605,
+        "review_1": "This was not urgent, but loose rail by back door had become inconvenient enough that another week would have been a nuisance; the contractor measured the gate opening and listed two hinge sizes.",
+        "review_2": "This was not urgent, but gutter overflowing onto steps had become inconvenient enough that another week would have been a nuisance; the contractor measured the gate opening and listed two hinge sizes."
+      },
+      {
+        "similarity": 0.8569,
+        "review_1": "We had rearranged our plans twice because of muddy entry after rain, and this time I wrote down what had changed before calling; a strong product dulled the tabletop after I asked them not to use it.",
+        "review_2": "We had rearranged our plans twice because of tea mark on sofa, and this time I wrote down what had changed before calling; a strong product dulled the tabletop after I asked them not to use it."
+      }
+    ],
+    "reviews_containing_a_repeated_exact_sentence": 0,
+    "percent_reviews_containing_a_repeated_exact_sentence": 0.0,
+    "average_review_length_characters": 151.1167,
+    "minimum_review_length_characters": 26,
+    "maximum_review_length_characters": 226,
+    "average_review_length_words": 26.428,
+    "minimum_review_length_words": 4,
+    "maximum_review_length_words": 39,
+    "word_length_buckets": {
+      "5-10": 107,
+      "11-20": 233,
+      "21-35": 1086,
+      "36-60": 73
+    },
+    "most_common_repeated_phrases": [
+      {
+        "phrase": "i asked for",
+        "review_count": 80
+      },
+      {
+        "phrase": "this time i",
+        "review_count": 68
+      },
+      {
+        "phrase": "i wrote down",
+        "review_count": 66
+      },
+      {
+        "phrase": "changed before calling",
+        "review_count": 64
+      },
+      {
+        "phrase": "down what had",
+        "review_count": 64
+      },
+      {
+        "phrase": "down what had changed",
+        "review_count": 64
+      },
+      {
+        "phrase": "down what had changed before",
+        "review_count": 64
+      },
+      {
+        "phrase": "down what had changed before calling",
+        "review_count": 64
+      },
+      {
+        "phrase": "had changed before",
+        "review_count": 64
+      },
+      {
+        "phrase": "had changed before calling",
+        "review_count": 64
+      },
+      {
+        "phrase": "i wrote down what",
+        "review_count": 64
+      },
+      {
+        "phrase": "i wrote down what had",
+        "review_count": 64
+      },
+      {
+        "phrase": "i wrote down what had changed",
+        "review_count": 64
+      },
+      {
+        "phrase": "we had rearranged",
+        "review_count": 64
+      },
+      {
+        "phrase": "what had changed",
+        "review_count": 64
+      }
+    ],
+    "most_common_repeated_sentences": []
+  },
+  "comparison": {
+    "current_near_duplicate_pair_count": 1064,
+    "diverse_near_duplicate_pair_count": 58,
+    "current_repeated_sentence_percentage": 96.6,
+    "diverse_repeated_sentence_percentage": 0.0,
+    "near_duplicate_pairs_reduced": true,
+    "repeated_sentence_percentage_reduced": true
+  }
+}

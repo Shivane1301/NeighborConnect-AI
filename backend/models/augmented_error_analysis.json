@@ -1,0 +1,815 @@
+{
+  "model": {
+    "vectorizer": "backend\\models\\experimental_augmented_vectorizer_d.joblib",
+    "classifier": "backend\\models\\experimental_augmented_d.joblib",
+    "classifier_type": "LinearSVC",
+    "confidence_available": false,
+    "confidence_note": "LinearSVC has no calibrated predict_proba output; confidence fields are null and raw decision margins are reported separately."
+  },
+  "test_dataset": {
+    "path": "backend/dataset/reviews_test.csv",
+    "total_reviews": 150,
+    "class_counts": {
+      "negative": 50,
+      "neutral": 50,
+      "positive": 50
+    }
+  },
+  "metrics": {
+    "correct_predictions": 125,
+    "incorrect_predictions": 25,
+    "accuracy": 0.8333333333333334,
+    "error_count": 25,
+    "error_percentage": 16.666666666666668,
+    "macro_f1": 0.8332420531030262
+  },
+  "confusion_matrix": {
+    "labels": [
+      "negative",
+      "neutral",
+      "positive"
+    ],
+    "matrix": [
+      [
+        44,
+        4,
+        2
+      ],
+      [
+        4,
+        42,
+        4
+      ],
+      [
+        8,
+        3,
+        39
+      ]
+    ]
+  },
+  "old_model_a_error_count": 31,
+  "new_model_d_error_count": 25,
+  "error_count_difference_new_minus_old": -6,
+  "error_category_comparison": {
+    "positive_to_negative": {
+      "old_model_a_count": 12,
+      "new_model_d_count": 8,
+      "change": "improved",
+      "difference_new_minus_old": -4
+    },
+    "positive_to_neutral": {
+      "old_model_a_count": 2,
+      "new_model_d_count": 3,
+      "change": "became_worse",
+      "difference_new_minus_old": 1
+    },
+    "neutral_to_positive": {
+      "old_model_a_count": 2,
+      "new_model_d_count": 4,
+      "change": "became_worse",
+      "difference_new_minus_old": 2
+    },
+    "neutral_to_negative": {
+      "old_model_a_count": 8,
+      "new_model_d_count": 4,
+      "change": "improved",
+      "difference_new_minus_old": -4
+    },
+    "negative_to_positive": {
+      "old_model_a_count": 2,
+      "new_model_d_count": 2,
+      "change": "stayed_the_same",
+      "difference_new_minus_old": 0
+    },
+    "negative_to_neutral": {
+      "old_model_a_count": 5,
+      "new_model_d_count": 4,
+      "change": "improved",
+      "difference_new_minus_old": -1
+    }
+  },
+  "error_counts_by_review_length": {
+    "1-10_words": {
+      "total_reviews": 27,
+      "error_count": 5,
+      "error_percentage": 18.5185
+    },
+    "11-20_words": {
+      "total_reviews": 122,
+      "error_count": 20,
+      "error_percentage": 16.3934
+    },
+    "21-35_words": {
+      "total_reviews": 1,
+      "error_count": 0,
+      "error_percentage": 0.0
+    },
+    "36+_words": {
+      "total_reviews": 0,
+      "error_count": 0,
+      "error_percentage": 0.0
+    }
+  },
+  "error_pattern_analysis": {
+    "method": "Descriptive case-insensitive keyword and phrase checks on actual misclassified review text; flags may overlap and are not causal explanations.",
+    "counts": {
+      "negation": 1,
+      "mixed_sentiment_terms": 2,
+      "strong_positive_wording": 0,
+      "strong_negative_wording": 0,
+      "neutral_factual_wording": 3,
+      "short_review_1_to_10_words": 5,
+      "long_review_36_or_more_words": 0,
+      "service_specific_terminology": 15,
+      "informal_wording": 0,
+      "ambiguous_or_hedged_wording": 1
+    },
+    "examples": {
+      "negation": [
+        "Portions were much smaller than listed, with no response to my complaint."
+      ],
+      "mixed_sentiment_terms": [
+        "Our water pump failed on Sunday, but the local service replied promptly and restored it that evening.",
+        "Several boxes were moved and one fragile lamp was broken during the clean."
+      ],
+      "strong_positive_wording": [],
+      "strong_negative_wording": [],
+      "neutral_factual_wording": [
+        "One washer was replaced, and the old part was left beside the sink.",
+        "The invoice lists a call-out fee and a separate charge for the replacement tap.",
+        "A replacement hinge was fitted to the upper cabinet door."
+      ],
+      "short_review_1_to_10_words": [
+        "A replacement hinge was fitted to the upper cabinet door.",
+        "The dishwasher was disconnected while the hose measurement was taken.",
+        "The vendor confirmed the pickup time as 6:30 p.m.",
+        "The work was rushed, with visible gaps around the frame.",
+        "The estimate changed after the work began, with little explanation."
+      ],
+      "long_review_36_or_more_words": [],
+      "service_specific_terminology": [
+        "I appreciated the plumber calling when traffic slowed him down; he still arrived inside the revised window.",
+        "The tap replacement was neat enough that you can barely tell the fitting was changed.",
+        "The electrician replaced an overheating dimmer with a compatible unit and talked me through the new settings.",
+        "The electrician responded to my evening message the next morning and arranged a same-day safety check.",
+        "The cleaner arrived early, confirmed which rooms mattered most, and finished within our budget."
+      ],
+      "informal_wording": [],
+      "ambiguous_or_hedged_wording": [
+        "Our water pump failed on Sunday, but the local service replied promptly and restored it that evening."
+      ]
+    }
+  },
+  "concerning_examples": {
+    "strong_positive_predicted_negative": [],
+    "strong_negative_predicted_positive": [],
+    "neutral_factual_predicted_polar": [
+      {
+        "review": "One washer was replaced, and the old part was left beside the sink.",
+        "actual_sentiment": "neutral",
+        "predicted_sentiment": "positive",
+        "confidence": null,
+        "decision_margin": 0.114187
+      },
+      {
+        "review": "The invoice lists a call-out fee and a separate charge for the replacement tap.",
+        "actual_sentiment": "neutral",
+        "predicted_sentiment": "negative",
+        "confidence": null,
+        "decision_margin": 0.614535
+      },
+      {
+        "review": "A replacement hinge was fitted to the upper cabinet door.",
+        "actual_sentiment": "neutral",
+        "predicted_sentiment": "negative",
+        "confidence": null,
+        "decision_margin": 0.539758
+      }
+    ]
+  },
+  "misclassifications": [
+    {
+      "review": "I appreciated the plumber calling when traffic slowed him down; he still arrived inside the revised window.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.521092,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The tap replacement was neat enough that you can barely tell the fitting was changed.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.392968,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "Our water pump failed on Sunday, but the local service replied promptly and restored it that evening.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.385372,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": true,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": true,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The electrician replaced an overheating dimmer with a compatible unit and talked me through the new settings.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.497849,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "Two fans were installed without wobble; the quote included labor, so there was nothing unexpected on the invoice.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "neutral",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.585076,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The electrician responded to my evening message the next morning and arranged a same-day safety check.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.188403,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The cleaner arrived early, confirmed which rooms mattered most, and finished within our budget.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "neutral",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.119753,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The team removed the paint dust without scratching the newly fitted floor.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.525344,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "I received a photo update while the custom desk was being finished.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.098628,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The neighborhood lunch vendor remembered our container request and included a clear itemized receipt.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "neutral",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.291482,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "An extra vegetarian meal was added without fuss; communication was courteous throughout.",
+      "actual_sentiment": "positive",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.207521,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "One washer was replaced, and the old part was left beside the sink.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "positive",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.114187,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": true,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The invoice lists a call-out fee and a separate charge for the replacement tap.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.614535,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": true,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The technician switched off the main supply before opening the panel.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "positive",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.009542,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The carpenter took measurements for a shelf that will span the alcove.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "positive",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.219945,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "A replacement hinge was fitted to the upper cabinet door.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.539758,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": true,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": true,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The dishwasher was disconnected while the hose measurement was taken.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.454679,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The vendor confirmed the pickup time as 6:30 p.m.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "negative",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 1.018217,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The caterer asked for the final guest count one day before the event.",
+      "actual_sentiment": "neutral",
+      "predicted_sentiment": "positive",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.42085,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The explanation changed between the quote and invoice, which included unexplained parts.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "positive",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.097437,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "Several boxes were moved and one fragile lamp was broken during the clean.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.168049,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": true,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": true,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "An unexpected materials charge doubled the price from the original estimate.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.162113,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The work was rushed, with visible gaps around the frame.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.231482,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "The estimate changed after the work began, with little explanation.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "neutral",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.810272,
+      "pattern_flags": {
+        "negation": false,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": true,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    },
+    {
+      "review": "Portions were much smaller than listed, with no response to my complaint.",
+      "actual_sentiment": "negative",
+      "predicted_sentiment": "positive",
+      "confidence": null,
+      "confidence_note": "LinearSVC does not provide calibrated predict_proba confidence.",
+      "decision_margin": 0.124628,
+      "pattern_flags": {
+        "negation": true,
+        "mixed_sentiment_terms": false,
+        "strong_positive_wording": false,
+        "strong_negative_wording": false,
+        "neutral_factual_wording": false,
+        "short_review_1_to_10_words": false,
+        "long_review_36_or_more_words": false,
+        "service_specific_terminology": false,
+        "informal_wording": false,
+        "ambiguous_or_hedged_wording": false,
+        "strong_positive_predicted_negative": false,
+        "strong_negative_predicted_positive": false,
+        "neutral_factual_predicted_polar": false,
+        "confidence_available": false
+      }
+    }
+  ],
+  "protected_hashes_before": {
+    "locked_test_dataset": "35e02f47ab129c550b275400a7b372de0ca4b75702b41ce157ad2288308dec9d",
+    "original_training_dataset": "3b1c4cfdc13b8502dce29fc2328d016b7f9f56bef6c136ca148f244b36be84a7",
+    "diverse_training_dataset": "239533297c1124b87abe75c562c3127a4f7b761d579a8223691b00315dfc3932",
+    "targeted_training_dataset": "086dcaba77965cc0c54f7ec8eac79e5bcec5d82e73abbb8af258136ac3da73c4",
+    "augmented_training_dataset": "54b1f410aadd039634ee5d83e6e07f807000801f0e64c779eebd9cc0a6dcb211",
+    "production_classifier": "6aeb07e480443120fedcf57b9414beb2cdd813d9a36741312952b34c5c8e8839",
+    "production_vectorizer": "f52d32919d10eb464fcc740a842082457a780f49ee1a445cf267f46dd1d5fa44",
+    "experimental_classifier_d": "5d322bbac1af4590c8e5e2187ae7957566b1f50f3a38f3e43100f6148d3f5884",
+    "experimental_vectorizer_d": "1f673abab02bbf0cad6ca5e92d6a15fe391c510d3a8a8fe3ba0f3aa2e3e4a807"
+  },
+  "protected_hashes_after": {
+    "locked_test_dataset": "35e02f47ab129c550b275400a7b372de0ca4b75702b41ce157ad2288308dec9d",
+    "original_training_dataset": "3b1c4cfdc13b8502dce29fc2328d016b7f9f56bef6c136ca148f244b36be84a7",
+    "diverse_training_dataset": "239533297c1124b87abe75c562c3127a4f7b761d579a8223691b00315dfc3932",
+    "targeted_training_dataset": "086dcaba77965cc0c54f7ec8eac79e5bcec5d82e73abbb8af258136ac3da73c4",
+    "augmented_training_dataset": "54b1f410aadd039634ee5d83e6e07f807000801f0e64c779eebd9cc0a6dcb211",
+    "production_classifier": "6aeb07e480443120fedcf57b9414beb2cdd813d9a36741312952b34c5c8e8839",
+    "production_vectorizer": "f52d32919d10eb464fcc740a842082457a780f49ee1a445cf267f46dd1d5fa44",
+    "experimental_classifier_d": "5d322bbac1af4590c8e5e2187ae7957566b1f50f3a38f3e43100f6148d3f5884",
+    "experimental_vectorizer_d": "1f673abab02bbf0cad6ca5e92d6a15fe391c510d3a8a8fe3ba0f3aa2e3e4a807"
+  },
+  "protected_files_unchanged": true
+}

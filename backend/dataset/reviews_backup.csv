@@ -1,0 +1,52 @@
+review,sentiment
+"The plumber was excellent and fixed the leaking pipe quickly.",positive
+"Friendly electrician, careful work, and a very clean finish.",positive
+"The cleaner arrived on time and left the apartment spotless.",positive
+"Our air conditioner works perfectly after the technician's visit.",positive
+"The painter was professional and the walls look beautiful.",positive
+"Fast response, fair price, and excellent communication.",positive
+"The carpenter did a fantastic job repairing our kitchen cabinet.",positive
+"Very reliable service and a polite, knowledgeable worker.",positive
+"The gardener transformed the yard and exceeded our expectations.",positive
+"The appliance repair was completed quickly and works like new.",positive
+"The service was outstanding from booking through completion.",positive
+"I am happy with the result and would gladly hire this vendor again.",positive
+"The plumber arrived late but completed the requested repair.",neutral
+"The electrician replaced the outlet as scheduled.",neutral
+"The cleaner did the work described in the booking.",neutral
+"The technician inspected the air conditioner and provided an estimate.",neutral
+"The painter finished the two rooms in three days.",neutral
+"The requested cabinet repair was completed without any changes.",neutral
+"The gardener trimmed the hedges and removed the clippings.",neutral
+"The worker answered my questions and explained the next steps.",neutral
+"The appointment took place this afternoon as planned.",neutral
+"The vendor offers the service listed in the profile.",neutral
+"The job was completed, and the invoice matched the quoted amount.",neutral
+"The repair solved the immediate issue, with no extra work needed.",neutral
+"The plumber missed the appointment and never called back.",negative
+"The electrician did a poor job and left exposed wires behind.",negative
+"The cleaner arrived late and the rooms were still dirty.",negative
+"The air conditioner stopped working again after the repair.",negative
+"The painter damaged the floor and left a messy workspace.",negative
+"The price was much higher than the estimate without explanation.",negative
+"The carpenter was rude and did not finish the cabinet repair.",negative
+"The service was disappointing and the vendor ignored my messages.",negative
+"The technician failed to fix the problem after several visits.",negative
+"The gardener removed plants that were not supposed to be touched.",negative
+"The work was careless, slow, and not worth the money.",negative
+"I would not recommend this vendor because the result was terrible.",negative
+"Excellent work, the repair was completed perfectly.",positive
+"Great service from a helpful and professional vendor.",positive
+"The technician was efficient, kind, and reliable.",positive
+"The final result was impressive and worth the price.",positive
+"Everything went smoothly and I am very satisfied.",positive
+"The vendor completed the scheduled service at the agreed time.",neutral
+"The technician checked the issue and recorded the details.",neutral
+"The requested maintenance was performed as listed.",neutral
+"The appointment was ordinary and the result was acceptable.",neutral
+"The worker completed the task without making any promises.",neutral
+"The repair was terrible and the original problem remains.",negative
+"Poor workmanship caused another issue in the house.",negative
+"The vendor failed to arrive and provided no explanation.",negative
+"The service was frustrating, careless, and overpriced.",negative
+"The result was disappointing and I regret booking this vendor.",negative

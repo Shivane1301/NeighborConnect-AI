@@ -1,0 +1,151 @@
+review,sentiment
+"A plumber squeezed us in before lunch, found the split washer, and stopped the leak on the first visit.",positive
+"The drain cleared quickly; the final bill matched the estimate and the worktop was wiped down.",positive
+"I appreciated the plumber calling when traffic slowed him down; he still arrived inside the revised window.",positive
+"The new shower valve works quietly, and the technician showed me how to adjust it.",positive
+"The tap replacement was neat enough that you can barely tell the fitting was changed.",positive
+"Our water pump failed on Sunday, but the local service replied promptly and restored it that evening.",positive
+"Instead of pushing an expensive replacement, the plumber repaired the existing pipe and explained the savings.",positive
+"They wore shoe covers, checked for a second leak, and left the bathroom cleaner than before.",positive
+"A quick call back and a sensible repair kept our water running without a second appointment.",positive
+"The electrician replaced an overheating dimmer with a compatible unit and talked me through the new settings.",positive
+"She rang ten minutes before arrival, brought the right switch, and wrapped up exactly on schedule.",positive
+"Two fans were installed without wobble; the quote included labor, so there was nothing unexpected on the invoice.",positive
+"The electrician patiently marked the breaker labels for us after replacing a damaged socket.",positive
+"Power came back before dinner, and the repair has stayed reliable for several weeks.",positive
+"Clear options, tidy wiring, and a fair charge made a stressful outage much easier.",positive
+"Even though the ceiling access was awkward, the technician finished the light fitting carefully.",positive
+"The electrician responded to my evening message the next morning and arranged a same-day safety check.",positive
+"After the move-out clean, the oven racks and window tracks were spotless.",positive
+"The cleaner arrived early, confirmed which rooms mattered most, and finished within our budget.",positive
+"They lifted the rugs to clean underneath and put everything back neatly.",positive
+"I booked a deep clean for Saturday and got a clear checklist plus a friendly handover.",positive
+"The team removed the paint dust without scratching the newly fitted floor.",positive
+"We had guests coming, and the cleaner managed the whole flat with calm efficiency.",positive
+"The price was agreed in advance and the team stayed to touch up one missed corner.",positive
+"Fresh linens, polished taps, and no chemical smell made the bedroom feel welcoming.",positive
+"The carpenter matched the oak stain beautifully on the repaired chair leg.",positive
+"Our sliding door now glides smoothly; he explained the adjustment and charged only what he quoted.",positive
+"She measured twice before cutting the shelves, and each one sits level.",positive
+"A loose stair rail was secured quickly, with the screws countersunk and the dust swept away.",positive
+"I received a photo update while the custom desk was being finished.",positive
+"The cupboard hinge repair was small but done with the same care as a larger job.",positive
+"The carpenter suggested reusing the sound panels, which kept the project affordable.",positive
+"Despite a busy week, the carpenter kept the agreed delivery date for our bookcase.",positive
+"Our old washing machine was repaired for less than half the replacement quote.",positive
+"The technician explained the fridge thermostat issue without jargon and tested it through a full cycle.",positive
+"She arrived inside the window, carried the dryer carefully, and left the hallway untouched.",positive
+"A technician got the chest freezer cold again, saving a batch of groceries; the service charge was clear.",positive
+"My message was answered within minutes, and the oven repair was finished before the afternoon.",positive
+"The air conditioner cools evenly again; the service charge was clear from the start.",positive
+"They found a loose fan belt, showed me the worn part, and got the washer running quietly.",positive
+"Good communication and a reliable repair made the appliance service worth recommending.",positive
+"The caterer adjusted the spice level as requested, and all twelve meals arrived warm.",positive
+"I ordered breakfast for a meeting; everything was labeled, fresh, and ready fifteen minutes early.",positive
+"The bakery followed the allergy notes carefully and packed each item separately.",positive
+"The neighborhood lunch vendor remembered our container request and included a clear itemized receipt.",positive
+"Even with a last-minute headcount change, the food was ready on time and beautifully presented.",positive
+"The delivery driver called from the gate, and the vendor quickly sorted out the access issue.",positive
+"Our guests asked for the lentil stew recipe; the vendor packed leftovers separately and kept the catering total within the estimate.",positive
+"Our cake looked like the sketch and tasted as good as it looked.",positive
+"An extra vegetarian meal was added without fuss; communication was courteous throughout.",positive
+"The plumber recorded the pipe diameter and noted the location of the valve.",neutral
+"I requested a quote for a bathroom drain; the visit was booked for Thursday afternoon.",neutral
+"Water pressure was measured at the kitchen tap and written on the service slip.",neutral
+"One washer was replaced, and the old part was left beside the sink.",neutral
+"The appointment started at 2:15 and ended before 3.",neutral
+"The technician photographed the pump label before ordering a component.",neutral
+"The invoice lists a call-out fee and a separate charge for the replacement tap.",neutral
+"A follow-up inspection was placed on the calendar for next month.",neutral
+"An electrician checked four outlets and noted which circuit each one used.",neutral
+"The ceiling fan installation was listed as a two-hour appointment.",neutral
+"A written estimate for the breaker replacement was sent by email.",neutral
+"The technician switched off the main supply before opening the panel.",neutral
+"Two light fixtures were removed and returned to the customer.",neutral
+"The service receipt includes the test date and the meter reading.",neutral
+"We agreed on a morning appointment, and the electrician arrived at 9:30.",neutral
+"The wiring inspection covered the kitchen and hallway.",neutral
+"Three rooms and one bathroom were included in the cleaning checklist.",neutral
+"The cleaner used the supplies listed in the booking notes.",neutral
+"The appointment was scheduled for Friday, from 11 a.m. until 1 p.m.",neutral
+"A photograph of the meter reading was sent after the visit.",neutral
+"The final invoice separated the window cleaning from the regular service.",neutral
+"Both balconies were measured before the estimate was prepared.",neutral
+"The cleaner asked which cupboard shelves were part of the request.",neutral
+"A receipt was placed on the dining table when the appointment ended.",neutral
+"The carpenter took measurements for a shelf that will span the alcove.",neutral
+"The quote specifies pine boards, two brackets, and installation.",neutral
+"A replacement hinge was fitted to the upper cabinet door.",neutral
+"Work started at 8:45 and continued until the pieces were assembled.",neutral
+"The old door handle was returned to the homeowner.",neutral
+"The carpenter recorded three measurements before cutting the panel.",neutral
+"Payment was divided between materials and labor on the receipt.",neutral
+"The chair frame was inspected, and a repair estimate was provided.",neutral
+"The washing machine model and serial number were entered on the work order.",neutral
+"A technician checked the refrigerator temperature and recorded 5 degrees.",neutral
+"The oven inspection took place after the morning appointment was confirmed.",neutral
+"The receipt lists one replacement filter and the service charge.",neutral
+"The dishwasher was disconnected while the hose measurement was taken.",neutral
+"The repair visit was rescheduled from Tuesday to Wednesday by text.",neutral
+"The technician ran a rinse cycle and left the settings unchanged.",neutral
+"The air-conditioner filter was removed for inspection and then put back.",neutral
+"An estimate for the dryer motor was emailed later that day.",neutral
+"The meal order contained four vegetarian portions and two regular portions.",neutral
+"The vendor confirmed the pickup time as 6:30 p.m.",neutral
+"A receipt lists the dishes, quantities, and delivery charge.",neutral
+"The lunch boxes were placed at the reception desk in two bags.",neutral
+"Menu choices were submitted through the website on Monday.",neutral
+"The caterer asked for the final guest count one day before the event.",neutral
+"Each container had a printed label with its menu item.",neutral
+"Payment was recorded after the catering trays were collected.",neutral
+"The bakery order included one cake and a separate box of candles.",neutral
+"The plumber arrived well after the agreed slot and did not message until I called.",negative
+"The leak returned that night, but my request for a second visit was ignored.",negative
+"I was quoted for a washer replacement and charged for a full tap assembly without approval.",negative
+"Water pooled under the sink after the repair, and the worker had already left.",negative
+"Several questions about the pump were brushed off, so I still do not know what was replaced.",negative
+"The drain was no faster after the visit, despite an added emergency fee.",negative
+"They cancelled twice and never offered a firm date for the pipe repair.",negative
+"Debris was left in the tub, and the invoice was higher than the written estimate.",negative
+"The plumber shut off the water but did not restore it before leaving.",negative
+"The electrician left the switch plate loose and stopped replying when I pointed it out.",negative
+"The breaker tripped again within an hour of the repair.",negative
+"An extra labor charge appeared even though the job took less time than quoted.",negative
+"They arrived late with no tools for the fault I had described in advance.",negative
+"The new socket is crooked, and the exposed edge has not been corrected.",negative
+"I waited all morning for the safety inspection, then received a cancellation text at noon.",negative
+"The explanation changed between the quote and invoice, which included unexplained parts.",negative
+"The fan still rattles, and the installer blamed the ceiling without checking it.",negative
+"The cleaner skipped the bathroom listed in the booking and left before I noticed.",negative
+"Grease remained on the hob after I paid the deep-clean price.",negative
+"No one answered my messages about the two-hour delay.",negative
+"The team used a strong product on the wood despite my written warning.",negative
+"The quoted amount excluded a fee that was added only after the work.",negative
+"Several boxes were moved and one fragile lamp was broken during the clean.",negative
+"Windows were streaked, and the provider declined to return for a touch-up.",negative
+"I had to sweep the kitchen again after the cleaner departed.",negative
+"The shelf was cut too short and the carpenter wanted full payment before correcting it.",negative
+"The door still scrapes the floor; the promised adjustment never happened.",negative
+"An unexpected materials charge doubled the price from the original estimate.",negative
+"The carpenter missed the delivery date and stopped responding to calls.",negative
+"Wood shavings were left across the room, and a cabinet handle was missing.",negative
+"They installed the hinge on the wrong side despite the diagram I sent.",negative
+"The chair joint came apart after two days, and no repair was offered.",negative
+"The work was rushed, with visible gaps around the frame.",negative
+"The freezer drawer still jams after the visit, and the technician's note incorrectly says the fault was cleared.",negative
+"I was billed for a new part but the old one was left in the appliance.",negative
+"The refrigerator repair took three visits and the cooling problem remains.",negative
+"The technician cancelled late and gave me no replacement appointment.",negative
+"A fee for weekend service appeared although the visit was on a weekday.",negative
+"The oven was left disconnected, and my follow-up call went to voicemail.",negative
+"They did not test the dryer after repair, and it stopped mid-cycle.",negative
+"The estimate changed after the work began, with little explanation.",negative
+"The lunch delivery arrived cold and nearly an hour after the agreed time.",negative
+"Two dishes were missing, and the vendor stopped answering once payment cleared.",negative
+"The caterer ignored the allergy details I had sent twice.",negative
+"The final bill included packaging charges that were never mentioned.",negative
+"Our order was packed for the wrong pickup time and could not be served.",negative
+"The bakery misspelled the name on the cake and refused to replace it.",negative
+"Portions were much smaller than listed, with no response to my complaint.",negative
+"The vendor confirmed the order but cancelled shortly before the event.",negative
+"Several meal boxes were open in the bag when the driver arrived.",negative
